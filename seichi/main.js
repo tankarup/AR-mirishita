@@ -53,8 +53,8 @@ function set_objects(){
 		position:"0 10 0",
 		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]",
-		height: "5",
-		width: "10",
+		//height: "5",
+		//width: "10",
 
 	},
 	
