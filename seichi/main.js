@@ -37,7 +37,7 @@ function set_objects(){
 		lat:35.43448,
 		lon:139.61287,
 		scale:"20 20 20",
-		position:"0 10 0",
+		position:"0 10 -10",
 		value: 'sample text',
 		"look-at": "[gps-camera]",
 	},
@@ -53,8 +53,8 @@ function set_objects(){
 		position:"0 10 0",
 		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]",
-		height: 5,
-		width: 10,
+		height: "5",
+		width: "10",
 
 	},
 	
