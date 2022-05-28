@@ -35,11 +35,6 @@ function set_objects(){
 		id: 1,
 		lat:35.43486,
 		lon:139.61304,
-		src:"",
-		mtl:"",
-		scale:"10 2 2",
-		position:"0 20 0",
-		rotation: "0 0 0",
 		value: 'sample text',
 	},
 	{
@@ -47,12 +42,8 @@ function set_objects(){
 		id: 2,
 		lat:35.43438,
 		lon:139.61251,
-		material: "color: green",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
-		mtl:"",
-		scale:"10 5 2",
-		position:"0 15 0",
-		rotation: "0 0 0",
+
 	},
    ];
 
