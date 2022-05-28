@@ -52,7 +52,7 @@ function set_objects(){
     if (!shaped){
 		set_notice("adding objects...");
         let scene = document.querySelector('a-scene');
-		for (const object of objects){
+		for (let object of objects){
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
 			let model = document.createElement(object.model);
 			if (object.material) model.setAttribute('material', object.material);
@@ -61,6 +61,7 @@ function set_objects(){
 			if (object.scale) model.setAttribute('scale', object.scale);
 			if (object.position) model.setAttribute('position', object.position);
 			if (object.rotation) model.setAttribute('rotation', object.rotation);
+			scene.appendChild(model);
 			set_notice(`model ${object.id} appended.`);
 		}
 		shaped = true;
