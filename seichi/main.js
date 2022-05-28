@@ -75,7 +75,7 @@ function set_objects(){
 			if (object.src) model.setAttribute('rotation', object.src);
 			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
-			set_notice(`model ${model.outerHTML} appended.`);
+			set_notice(`model ${model.id} appended.`);
 		}
 		shaped = true;
 		/*
