@@ -39,7 +39,7 @@ function set_objects(){
 		scale:"20 20 20",
 		position:"0 10 0",
 		value: 'sample text',
-		"look-at": "[gps-camera]"
+		"look-at": "[gps-camera]",
 	},
 	
 
@@ -52,7 +52,7 @@ function set_objects(){
 		lon:139.61251,
 		position:"0 10 0",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
-		"look-at": "[gps-camera]"
+		"look-at": "[gps-camera]",
 
 	},
 	
@@ -75,7 +75,7 @@ function set_objects(){
 			if (object.src) model.setAttribute('rotation', object.src);
 			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
-			set_notice(`model ${object.id} appended.`);
+			set_notice(`model ${model.outerHTML} appended.`);
 		}
 		shaped = true;
 		/*
