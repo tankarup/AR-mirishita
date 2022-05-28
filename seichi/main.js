@@ -18,6 +18,15 @@ function set_objects(){
     //elem.setAttribute('scale', `1 1 ${parseInt(wind_speed)}`);
     */
    const objects = [
+	{
+		model: "a-text",
+		id: "id1",
+		lat:35.43486,
+		lon:139.61304,
+		scale:"10 20 2",
+		position:"0 10 0",
+		value: 'sample text',
+	},
 	   {
 		   model: "a-box",
 		   id: "id0",
@@ -31,18 +40,14 @@ function set_objects(){
 		   rotation: "0 0 0",
 	   },
 	   
-	   {
-		model: "a-text",
-		id: "id1",
-		lat:35.43486,
-		lon:139.61304,
-		value: 'sample text',
-	},
+
 	{
 		model: "a-image",
 		id: "id2",
 		lat:35.43438,
 		lon:139.61251,
+		scale:"10 20 2",
+		position:"0 10 0",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 
 	},
