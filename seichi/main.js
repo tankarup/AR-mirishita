@@ -48,11 +48,13 @@ function set_objects(){
 	{
 		model: "a-image",
 		id: "id2",
-		lat:35.43438,
-		lon:139.61251,
+		lat:35.43478,
+		lon:139.61238,
 		position:"0 10 0",
 		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]",
+		height: 5,
+		width: 10,
 
 	},
 	
@@ -73,6 +75,8 @@ function set_objects(){
 			if (object.rotation) model.setAttribute('rotation', object.rotation);
 			if (object.value) model.setAttribute('rotation', object.value);
 			if (object.src) model.setAttribute('rotation', object.src);
+			if (object.height) model.setAttribute('rotation', object.height);
+			if (object.width) model.setAttribute('rotation', object.width);
 			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
 			set_notice(`model ${model.id} appended.`);
