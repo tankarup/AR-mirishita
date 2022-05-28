@@ -53,6 +53,7 @@ function set_objects(){
 		set_notice("adding objects...");
         let scene = document.querySelector('a-scene');
 		for (let object of objects){
+			set_notice(`model ${object.id} appending.`);
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
 			let model = document.createElement(object.model);
 			if (object.material) model.setAttribute('material', object.material);
