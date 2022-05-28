@@ -21,14 +21,15 @@ function set_objects(){
 	{
 		model: "a-box",
 		id: "id0",
+		scale:"10 20 2",
+		position:"0 10 0",
+		rotation: "0 0 0",
 		lat:35.43448,
 		lon:139.61287,
 		material: "color: yellow",
 		src:"",
 		mtl:"",
-		scale:"10 20 2",
-		position:"0 10 0",
-		rotation: "0 0 0",
+
 	},
 	{
 		model: "a-text",
@@ -49,7 +50,6 @@ function set_objects(){
 		id: "id2",
 		lat:35.43438,
 		lon:139.61251,
-		scale:"10 20 2",
 		position:"0 10 0",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]"
