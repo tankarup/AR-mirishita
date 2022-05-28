@@ -30,7 +30,7 @@ function set_objects(){
 		   position:"0 10 0",
 		   rotation: "0 0 0",
 	   },
-	   
+	   /*
 	   {
 		model: "a-text",
 		id: "id1",
@@ -45,7 +45,7 @@ function set_objects(){
 		lon:139.61251,
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 
-	},
+	},*/
 	
    ];
 
