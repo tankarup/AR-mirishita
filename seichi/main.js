@@ -26,7 +26,7 @@ function set_objects(){
 		   material: "color: yellow",
 		   src:"",
 		   mtl:"",
-		   scale:"100 100 10",
+		   scale:"10 20 2",
 		   position:"0 10 0",
 		   rotation: "0 0 0",
 	   },
