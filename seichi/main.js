@@ -21,8 +21,8 @@ function set_objects(){
 	   {
 		   model: "a-box",
 		   id: 0,
-		   lat:35.43483,
-		   lon:139.61233,
+		   lat:35.43448,
+		   lon:139.61287,
 		   material: "color: yellow",
 		   src:"",
 		   mtl:"",
