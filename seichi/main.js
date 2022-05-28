@@ -45,6 +45,7 @@ function set_objects(){
 			model.setAttribute('position', object.position);
 			model.setAttribute('rotation', object.rotation);
 			scene.appendChild(model);
+			set_notice(`model ${object.id} appended.`);
 		}
 		shaped = true;
 		/*
