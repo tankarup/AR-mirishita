@@ -8,7 +8,7 @@ let initial_compass;
 let shaped = false;
 function set_objects(){
 
-    
+    set_notice("setting objects...");
 
     /*
     const elem = document.getElementById('wind_shape');
@@ -31,9 +31,9 @@ function set_objects(){
 		   rotation: "0 0 0",
 	   },
    ];
-    if (!initial_compass) return;
+
     if (!shaped){
-		
+		set_notice("adding objects...");
         let scene = document.querySelector('a-scene');
 		for (const object of objects){
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
