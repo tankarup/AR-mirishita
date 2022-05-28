@@ -26,9 +26,9 @@ function set_objects(){
 		   material: "color: yellow",
 		   src:"",
 		   mtl:"",
-		   scale:"(100 100 10)",
-		   position:"(0 10 0)",
-		   rotation: "(0 0 0)",
+		   scale:"100 100 10",
+		   position:"0 10 0",
+		   rotation: "0 0 0",
 	   },
    ];
     if (!initial_compass) return;
@@ -36,8 +36,10 @@ function set_objects(){
 		
         let scene = document.querySelector('a-scene');
 		for (const object of objects){
+			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
 			let model = document.createElement(object.model);
-			model.setAttribute('id', obkect.id);
+			model.setAttribute('material', object.material);
+			model.setAttribute('id', object.id);
 			model.setAttribute('gps-entity-place', `latitude: ${object.lat}; longitude: ${object.lon};`);
 			model.setAttribute('scale', object.scale);
 			model.setAttribute('position', object.position);
