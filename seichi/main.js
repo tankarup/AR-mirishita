@@ -19,27 +19,29 @@ function set_objects(){
     */
    const objects = [
 	{
+		model: "a-box",
+		id: "id0",
+		lat:35.43448,
+		lon:139.61287,
+		material: "color: yellow",
+		src:"",
+		mtl:"",
+		scale:"10 20 2",
+		position:"0 10 0",
+		rotation: "0 0 0",
+	},
+	{
 		model: "a-text",
 		id: "id1",
-		lat:35.43478,
-		lon:139.61238,
-		scale:"50 50 50",
+		lat:35.43448,
+		lon:139.61287,
+		scale:"20 20 20",
 		position:"0 10 0",
 		value: 'sample text',
 		"look-at": "[gps-camera]"
 	},
-	   {
-		   model: "a-box",
-		   id: "id0",
-		   lat:35.43448,
-		   lon:139.61287,
-		   material: "color: yellow",
-		   src:"",
-		   mtl:"",
-		   scale:"10 20 2",
-		   position:"0 10 0",
-		   rotation: "0 0 0",
-	   },
+	
+
 	   
 
 	{
