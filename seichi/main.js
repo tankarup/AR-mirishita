@@ -20,7 +20,7 @@ function set_objects(){
    const objects = [
 	   {
 		   model: "a-box",
-		   id: 0,
+		   id: "id0",
 		   lat:35.43448,
 		   lon:139.61287,
 		   material: "color: yellow",
@@ -30,23 +30,23 @@ function set_objects(){
 		   position:"0 10 0",
 		   rotation: "0 0 0",
 	   },
-	   /*
+	   
 	   {
 		model: "a-text",
-		id: 1,
+		id: "id1",
 		lat:35.43486,
 		lon:139.61304,
 		value: 'sample text',
 	},
 	{
 		model: "a-image",
-		id: 2,
+		id: "id2",
 		lat:35.43438,
 		lon:139.61251,
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 
 	},
-	*/
+	
    ];
 
     if (!shaped){
