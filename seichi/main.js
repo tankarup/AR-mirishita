@@ -30,6 +30,30 @@ function set_objects(){
 		   position:"0 10 0",
 		   rotation: "0 0 0",
 	   },
+	   {
+		model: "a-text",
+		id: 1,
+		lat:35.43486,
+		lon:139.61304,
+		src:"",
+		mtl:"",
+		scale:"10 2 2",
+		position:"0 20 0",
+		rotation: "0 0 0",
+		value: 'sample text',
+	},
+	{
+		model: "a-image",
+		id: 2,
+		lat:35.43438,
+		lon:139.61251,
+		material: "color: green",
+		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
+		mtl:"",
+		scale:"10 5 2",
+		position:"0 15 0",
+		rotation: "0 0 0",
+	},
    ];
 
     if (!shaped){
@@ -38,13 +62,12 @@ function set_objects(){
 		for (const object of objects){
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
 			let model = document.createElement(object.model);
-			model.setAttribute('material', object.material);
-			model.setAttribute('id', object.id);
-			model.setAttribute('gps-entity-place', `latitude: ${object.lat}; longitude: ${object.lon};`);
-			model.setAttribute('scale', object.scale);
-			model.setAttribute('position', object.position);
-			model.setAttribute('rotation', object.rotation);
-			scene.appendChild(model);
+			if (object.material) model.setAttribute('material', object.material);
+			if (object.id) model.setAttribute('id', object.id);
+			if (object.lat) model.setAttribute('gps-entity-place', `latitude: ${object.lat}; longitude: ${object.lon};`);
+			if (object.scale) model.setAttribute('scale', object.scale);
+			if (object.position) model.setAttribute('position', object.position);
+			if (object.rotation) model.setAttribute('rotation', object.rotation);
 			set_notice(`model ${object.id} appended.`);
 		}
 		shaped = true;
