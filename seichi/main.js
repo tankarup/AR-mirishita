@@ -6,10 +6,8 @@ let amedas_json;
 let initial_compass;
 
 let shaped = false;
-function update_wind_shape(){
-    if (!current_lon) return;
-    if (!current_lat) return;
-    if (!amedas_json) return;
+function set_objects(){
+
     
 
     /*
@@ -28,7 +26,7 @@ function update_wind_shape(){
 		   material: "color: yellow",
 		   src:"",
 		   mtl:"",
-		   scale:"(1 1 1)",
+		   scale:"(100 100 10)",
 		   position:"(0 10 0)",
 		   rotation: "(0 0 0)",
 	   },
@@ -92,7 +90,6 @@ function get_location() {
 
         set_location_info(`Latitude: ${latitude} \n Longitude: ${longitude}`);
 
-        update_wind_shape();
     }
 
     function error() {
@@ -106,8 +103,14 @@ function get_location() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
 
-    let first_time = true;
     window.addEventListener('deviceorientation', function(event) {
+		let info = '';
+		info += '方角       : ' + event.alpha;
+		info += ' 上下の傾き : ' + event.beta;
+		info += ' 左右の傾き : ' + event.gamma;
+		info += ' コンパスの向き : ' + event.webkitCompassHeading;
+		info += ' コンパスの精度 : ' + event.webkitCompassAccuracy;
+
         console.log('方角       : ' + event.alpha);
         console.log('上下の傾き : ' + event.beta);
         console.log('左右の傾き : ' + event.gamma);
@@ -115,27 +118,9 @@ function get_location() {
         console.log('コンパスの向き : ' + event.webkitCompassHeading);
         console.log('コンパスの精度 : ' + event.webkitCompassAccuracy);
 
-        const compass_heading_str = parseInt(((event.webkitCompassHeading+360/16/2)%360)/(360/16)+1) + '';
-        set_device_info(`compass: ${compass_heading_str}`);
+        set_device_info(info);
 
         if (!event.webkitCompassHeading) return;
-        if (first_time){
-            /*
-            //https://stackoverflow.com/questions/53459247/ar-js-trying-to-synchronize-scene-to-compass-north
-            const compassdir = event.webkitCompassHeading;// however you get the compass reading
-            const model = document.getElementById('wind_shape');
-            let rotation = model.getAttribute('rotation');
-            rotation.y = THREE.Math.degToRad(-compassdir);
-            model.setAttribute('rotation', "0 90 0");
-            */
-            initial_compass = event.webkitCompassHeading;
-            first_time = false;
-            update_wind_shape();
-        }
-
-        
-
-
       });
 }
 function set_notice(text){
@@ -224,6 +209,7 @@ function get_nearest_wind(lat, lon, amedas_data){
 
 function init(){
     console.log('init');
+	set_objects();
     get_location();
 }
 window.onload = function (){
