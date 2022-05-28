@@ -61,6 +61,8 @@ function set_objects(){
 			if (object.scale) model.setAttribute('scale', object.scale);
 			if (object.position) model.setAttribute('position', object.position);
 			if (object.rotation) model.setAttribute('rotation', object.rotation);
+			if (object.value) model.setAttribute('rotation', object.value);
+			if (object.src) model.setAttribute('rotation', object.src);
 			scene.appendChild(model);
 			set_notice(`model ${object.id} appended.`);
 		}
@@ -145,6 +147,7 @@ function get_location() {
 }
 function set_notice(text){
     document.getElementById('general_info').innerHTML = `<pre>${text}</pre>`;
+	console.log(text);
 }
 function set_device_info(text){
     document.getElementById('device_info').innerHTML = `<pre>${text}</pre>`;
