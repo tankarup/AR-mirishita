@@ -48,8 +48,8 @@ function set_objects(){
 	{
 		model: "a-image",
 		id: "id2",
-		lat:35.43478,
-		lon:139.61238,
+		lat:35.43464,
+		lon:139.61236,
 		position:"0 10 0",
 		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]",
