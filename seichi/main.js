@@ -21,8 +21,8 @@ function set_objects(){
 	{
 		model: "a-text",
 		id: "id1",
-		lat:35.43486,
-		lon:139.61304,
+		lat:35.43478,
+		lon:139.61238,
 		scale:"10 20 2",
 		position:"0 10 0",
 		value: 'sample text',
