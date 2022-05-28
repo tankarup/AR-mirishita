@@ -30,6 +30,7 @@ function set_objects(){
 		   position:"0 10 0",
 		   rotation: "0 0 0",
 	   },
+	   /*
 	   {
 		model: "a-text",
 		id: 1,
@@ -45,6 +46,7 @@ function set_objects(){
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 
 	},
+	*/
    ];
 
     if (!shaped){
