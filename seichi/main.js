@@ -23,9 +23,10 @@ function set_objects(){
 		id: "id1",
 		lat:35.43478,
 		lon:139.61238,
-		scale:"10 20 2",
+		scale:"50 50 50",
 		position:"0 10 0",
 		value: 'sample text',
+		"look-at": "[gps-camera]"
 	},
 	   {
 		   model: "a-box",
@@ -49,6 +50,7 @@ function set_objects(){
 		scale:"10 20 2",
 		position:"0 10 0",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
+		"look-at": "[gps-camera]"
 
 	},
 	
@@ -69,6 +71,7 @@ function set_objects(){
 			if (object.rotation) model.setAttribute('rotation', object.rotation);
 			if (object.value) model.setAttribute('rotation', object.value);
 			if (object.src) model.setAttribute('rotation', object.src);
+			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
 			set_notice(`model ${object.id} appended.`);
 		}
