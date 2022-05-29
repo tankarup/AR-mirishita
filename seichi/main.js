@@ -23,9 +23,9 @@ function set_objects(){
 		id: "id2",
 		//lat:35.43464,
 		//lon:139.61236,
-		lat:35.43473,
-		lon:139.61231,
-		//position:"0 10 0",
+		lat:35.43448,
+		lon:139.61287,
+		position:"0 0 0",
 		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
 		"look-at": "[gps-camera]",
 		height: "5",
@@ -38,24 +38,11 @@ function set_objects(){
 		lat:35.43448,
 		lon:139.61287,
 		scale:"20 20 20",
-		position:"0 10 -10",
+		position:"0 5 -1",
 		value: 'sample text',
 		"look-at": "[gps-camera]",
 	},
 	
-	{
-		model: "a-box",
-		id: "id0",
-		scale:"10 20 2",
-		position:"0 10 0",
-		rotation: "0 0 0",
-		lat:35.43448,
-		lon:139.61287,
-		material: "color: yellow",
-		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
-		mtl:"",
-
-	},
 
 
 	   
