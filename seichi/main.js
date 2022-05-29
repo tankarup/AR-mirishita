@@ -79,7 +79,7 @@ function set_objects(){
 			const lon = seichi.geometry.coordinates[0];
 			const name = seichi.properties.name;
 			const img = seichi.properties.image;
-			console.log(lat, lon, name, img);
+			console.log("aaa:", lat, lon, name, img);
 			if (!lat) continue;
 			if (!lon) continue;
 			let text_object = {
