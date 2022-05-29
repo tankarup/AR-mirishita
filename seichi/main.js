@@ -79,6 +79,7 @@ function set_objects(){
 			const lon = seichi.geometry.coordinates[0];
 			const name = seichi.properties.name;
 			const img = seichi.properties.image;
+			console.log(lat, lon, name, img);
 			let text_object = {
 				model: "a-text",
 				id: `text${index}`,
@@ -97,7 +98,6 @@ function set_objects(){
 				lon: lon,
 				"look-at": "[gps-camera]",
 				src:img,
-				"look-at": "[gps-camera]",
 				height: "5",
 				width: "10",
 		
