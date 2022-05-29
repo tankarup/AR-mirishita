@@ -5,6 +5,8 @@ let current_lon;
 let amedas_json;
 let initial_compass;
 
+const json = require('./seichi.geojson');
+
 let shaped = false;
 function set_objects(){
 
@@ -26,7 +28,7 @@ function set_objects(){
 		lat:35.43448,
 		lon:139.61287,
 		position:"0 0 0",
-		src:"https://pbs.twimg.com/media/FTrpc9zX0AE7_mJ.jpg",
+		src:"https://lh3.googleusercontent.com/pw/AM-JKLW7ZRr2c17MPVL8fnOqJxdPowUsKiZw2VoaeuORtGx44QJRpk3xLC_YxGnF2h9s0cvt6bJT50egoMginLfOPsWjvKJH0G-tGnvnCK5K2zBu3oyg9NzkS4RmYT9WoD-xMjoK0V5ApbApak1PNxuxaXW7=w1028-h378-no?authuser=1",
 		"look-at": "[gps-camera]",
 		height: "5",
 		width: "10",
@@ -54,6 +56,10 @@ function set_objects(){
     if (!shaped){
 		set_notice("adding objects...");
         let scene = document.querySelector('a-scene');
+		const seichis = json.features;
+		for (const seichi of seichis){
+
+		}
 		for (let object of objects){
 			set_notice(`model ${object.id} appending.`);
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
