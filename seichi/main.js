@@ -77,10 +77,10 @@ function set_objects(){
 			if (object.scale) model.setAttribute('scale', object.scale);
 			if (object.position) model.setAttribute('position', object.position);
 			if (object.rotation) model.setAttribute('rotation', object.rotation);
-			if (object.value) model.setAttribute('rotation', object.value);
-			if (object.src) model.setAttribute('rotation', object.src);
-			if (object.height) model.setAttribute('rotation', object.height);
-			if (object.width) model.setAttribute('rotation', object.width);
+			if (object.value) model.setAttribute('value', object.value);
+			if (object.src) model.setAttribute('src', object.src);
+			if (object.height) model.setAttribute('height', object.height);
+			if (object.width) model.setAttribute('width', object.width);
 			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
 			set_notice(`model ${model.id} appended.`);
