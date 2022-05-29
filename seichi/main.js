@@ -80,6 +80,8 @@ function set_objects(){
 			const name = seichi.properties.name;
 			const img = seichi.properties.image;
 			console.log(lat, lon, name, img);
+			if (!lat) continue;
+			if (!lon) continue;
 			let text_object = {
 				model: "a-text",
 				id: `text${index}`,
