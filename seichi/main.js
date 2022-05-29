@@ -7,6 +7,22 @@ let initial_compass;
 
 const json = seichi_geojson;
 
+function create_model(object){
+	let model = document.createElement(object.model);
+	if (object.material) model.setAttribute('material', object.material);
+	if (object.id) model.setAttribute('id', object.id);
+	if (object.lat) model.setAttribute('gps-entity-place', `latitude: ${object.lat}; longitude: ${object.lon};`);
+	if (object.scale) model.setAttribute('scale', object.scale);
+	if (object.position) model.setAttribute('position', object.position);
+	if (object.rotation) model.setAttribute('rotation', object.rotation);
+	if (object.value) model.setAttribute('value', object.value);
+	if (object.src) model.setAttribute('src', object.src);
+	if (object.height) model.setAttribute('height', object.height);
+	if (object.width) model.setAttribute('width', object.width);
+	if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
+	return model;
+}
+
 let shaped = false;
 function set_objects(){
 
@@ -40,7 +56,7 @@ function set_objects(){
 		lat:35.43448,
 		lon:139.61287,
 		scale:"10 10 10",
-		position:"0 -20 0",
+		position:"0 2 0",
 		value: 'sample text',
 		"look-at": "[gps-camera]",
 	},
@@ -57,9 +73,39 @@ function set_objects(){
 		set_notice("adding objects...");
         let scene = document.querySelector('a-scene');
 		const seichis = json.features;
+		let index = 0;
 		for (const seichi of seichis){
-
+			const lat = seichi.geometry.coordinates[1];
+			const lon = seichi.geometry.coordinates[0];
+			const name = seichi.properties.name;
+			const img = seichi.properties.image;
+			let text_object = {
+				model: "a-text",
+				id: `text${index}`,
+				lat: lat,
+				lon: lon,
+				scale: "10 10 10",
+				position: "0 2 0",
+				value: name,
+				"look-at": "[gps-camera]",
+			};
+			scene.appendChild(create_model(text_object));
+			let image_object = {
+				model: "a-image",
+				id: `image${index}`,
+				lat: lat,
+				lon: lon,
+				"look-at": "[gps-camera]",
+				src:img,
+				"look-at": "[gps-camera]",
+				height: "5",
+				width: "10",
+		
+			};
+			scene.appendChild(create_model(image_object));
+			index += 1;
 		}
+		/*
 		for (let object of objects){
 			set_notice(`model ${object.id} appending.`);
 			//<a-box material="color: yellow" gps-entity-place="latitude: <your-latitude>; longitude: <your-longitude>" position="0 30 0"/>
@@ -77,7 +123,7 @@ function set_objects(){
 			if (object["look-at"]) model.setAttribute('look-at', object["look-at"]);
 			scene.appendChild(model);
 			set_notice(`model ${model.id} appended.`);
-		}
+		}*/
 		shaped = true;
 		/*
         let model = document.createElement('a-obj-model');
