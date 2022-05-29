@@ -5,7 +5,7 @@ let current_lon;
 let amedas_json;
 let initial_compass;
 
-const json = require('./seichi.geojson');
+const json = seichi_geojson;
 
 let shaped = false;
 function set_objects(){

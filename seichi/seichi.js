@@ -1,4 +1,4 @@
-{
+const seichi_geojson = {
   "type": "FeatureCollection",
   "features": [
     {
@@ -3274,4 +3274,4 @@
       }
     }
   ]
-}
+};
