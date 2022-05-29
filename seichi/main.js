@@ -19,16 +19,17 @@ function set_objects(){
     */
    const objects = [
 	{
-		model: "a-box",
-		id: "id0",
-		scale:"10 20 2",
-		position:"0 10 0",
-		rotation: "0 0 0",
+		model: "a-image",
+		id: "id2",
+		//lat:35.43464,
+		//lon:139.61236,
 		lat:35.43448,
 		lon:139.61287,
-		material: "color: yellow",
-		src:"",
-		mtl:"",
+		//position:"0 10 0",
+		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
+		"look-at": "[gps-camera]",
+		//height: "5",
+		//width: "10",
 
 	},
 	{
@@ -42,21 +43,24 @@ function set_objects(){
 		"look-at": "[gps-camera]",
 	},
 	
+	{
+		model: "a-box",
+		id: "id0",
+		scale:"10 20 2",
+		position:"0 10 0",
+		rotation: "0 0 0",
+		lat:35.43448,
+		lon:139.61287,
+		material: "color: yellow",
+		src:"",
+		mtl:"",
+
+	},
+
 
 	   
 
-	{
-		model: "a-image",
-		id: "id2",
-		lat:35.43464,
-		lon:139.61236,
-		position:"0 10 0",
-		src:"./resources/FTrpc9zX0AE7_mJ.jpg",
-		"look-at": "[gps-camera]",
-		//height: "5",
-		//width: "10",
 
-	},
 	
    ];
 
