@@ -28,7 +28,7 @@ function set_objects(){
 		lat:35.43448,
 		lon:139.61287,
 		position:"0 0 0",
-		src:"https://lh3.googleusercontent.com/pw/AM-JKLW7ZRr2c17MPVL8fnOqJxdPowUsKiZw2VoaeuORtGx44QJRpk3xLC_YxGnF2h9s0cvt6bJT50egoMginLfOPsWjvKJH0G-tGnvnCK5K2zBu3oyg9NzkS4RmYT9WoD-xMjoK0V5ApbApak1PNxuxaXW7=w1028-h378-no?authuser=1",
+		src:"https://pbs.twimg.com/media/E4fjwpYXEAcFqmW?format=jpg&name=large",
 		"look-at": "[gps-camera]",
 		height: "5",
 		width: "10",
