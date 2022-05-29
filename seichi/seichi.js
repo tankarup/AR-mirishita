@@ -1,6 +1,6 @@
 const seichi_geojson = {
   "type": "FeatureCollection",
-  "features": [/*
+  "features": [
     {
       "type": "Feature",
       "properties": {
@@ -3255,7 +3255,7 @@ const seichi_geojson = {
           33.587748
         ]
       }
-    },*/
+    },
     {
       "type": "Feature",
       "properties": {
@@ -3268,8 +3268,8 @@ const seichi_geojson = {
       "geometry": {
         "type": "Point",
         "coordinates": [
-			139.61287,
-          35.43448
+          133.816325,
+          34.384912
         ]
       }
     }
